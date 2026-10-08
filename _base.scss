@@ -1,1 +1,15 @@
 
+body {
+  margin: 0;
+  font-family: $font-family;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $primary-color;
+}
