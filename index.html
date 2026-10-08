@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom CSS Framework Demo</title> 
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <main class="container">
+
+    <h1>Custom CSS Framework Demo</h1>
+
+    <section>
+      <h2>Typography</h2>
+    
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+    
+      <p>This is a paragraph using the custom CSS framework.</p>
+    
+      <a href="#">Example link</a>
+    
+      <ul>
+        <li>Unordered list item</li>
+        <li>Another list item</li>
+      </ul>
+    
+      <ol>
+        <li>Ordered list item</li>
+        <li>Another ordered item</li>
+      </ol>
+    </section>
+    
+    
+    <section>
+      <h2>Buttons</h2>
+    
+      <button>Default Button</button>
+    
+      <button class="btn-secondary">
+        Secondary Button
+      </button>
+    
+      <button class="btn-outline">
+        Outline Button
+      </button>
+    
+      <button disabled>
+        Disabled Button
+      </button>
+    </section>
+    
+    
+    <section>
+      <h2>Forms</h2>
+    
+      <form>
+    
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+        >
+    
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+        >
+    
+        <label for="program">Program</label>
+        <select id="program">
+          <option>Interactive Media Design</option>
+          <option>Graphic Design</option>
+          <option>Web Development</option>
+        </select>
+    
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          placeholder="Enter your message"
+        ></textarea>
+    
+        <p class="form-help">
+          This is helper text for a form field.
+        </p>
+    
+        <div class="form-check">
+          <input type="checkbox" id="updates">
+          <label for="updates">Receive updates</label>
+        </div>
+    
+        <fieldset>
+          <legend>Preferred Contact</legend>
+    
+          <div class="form-check">
+            <input type="radio" id="contact-email" name="contact">
+            <label for="contact-email">Email</label>
+          </div>
+    
+          <div class="form-check">
+            <input type="radio" id="contact-phone" name="contact">
+            <label for="contact-phone">Phone</label>
+          </div>
+        </fieldset>
+    
+        <button type="submit">Submit</button>
+    
+      </form>
+    </section>
+    
+    
+    <section>
+      <h2>Tables</h2>
+    
+      <div class="table-responsive" tabindex="0">
+    
+        <table>
+    
+          <caption>
+            Example Team Members
+          </caption>
+    
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+    
+          <tbody>
+            <tr>
+              <td>Alex</td>
+              <td>Designer</td>
+              <td>Active</td>
+            </tr>
+    
+            <tr>
+              <td>Sam</td>
+              <td>Developer</td>
+              <td>Active</td>
+            </tr>
+    
+            <tr>
+              <td>Jordan</td>
+              <td>Researcher</td>
+              <td>Inactive</td>
+            </tr>
+          </tbody>
+    
+          <tfoot>
+            <tr>
+              <td colspan="3">
+                Total Members: 3
+              </td>
+            </tr>
+          </tfoot>
+    
+        </table>
+    
+      </div>
+    </section>
+    
+    
+    <section>
+      <h2>Utility Classes</h2>
+    
+      <h3>Text Colors</h3>
+    
+      <p class="text-primary">Primary text</p>
+      <p class="text-secondary">Secondary text</p>
+      <p class="text-dark">Dark text</p>
+    
+    
+      <h3>Background Colors</h3>
+    
+      <div class="bg-primary text-light p-2">
+        Primary background
+      </div>
+    
+      <div class="bg-secondary text-light p-2">
+        Secondary background
+      </div>
+    
+      <div class="bg-light text-dark p-2">
+        Light background
+      </div>
+    
+    
+      <h3>Font Weight</h3>
+    
+      <p class="fw-light">Light text</p>
+      <p class="fw-normal">Normal text</p>
+      <p class="fw-medium">Medium text</p>
+      <p class="fw-bold">Bold text</p>
+    
+    
+      <h3>Font Size</h3>
+    
+      <p class="fs-small">Small text</p>
+      <p class="fs-base">Base text</p>
+      <p class="fs-large">Large text</p>
+    
+    
+      <h3>Margin</h3>
+    
+      <div class="m-1 border">
+        Margin 1
+      </div>
+    
+      <div class="m-2 border">
+        Margin 2
+      </div>
+    
+      <div class="m-3 border">
+        Margin 3
+      </div>
+    
+    
+      <h3>Padding</h3>
+    
+      <div class="p-1 border">
+        Padding 1
+      </div>
+    
+      <div class="p-2 border">
+        Padding 2
+      </div>
+    
+      <div class="p-3 border">
+        Padding 3
+      </div>
+    
+    
+      <h3>Borders</h3>
+    
+      <div class="p-2 border">
+        Standard Border
+      </div>
+    
+      <div class="p-2 border rounded">
+        Rounded Border
+      </div>
+    
+    </section>
+
+  </main>
+</body>
+</html>
