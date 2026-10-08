@@ -1,0 +1,107 @@
+@use "variables" as v;
+
+label {
+  display: block;
+  margin-bottom: v.$spacing-1;
+  color: v.$text-color;
+  font-weight: 600;
+}
+
+input:not(
+  [type="checkbox"], [type="radio"], [type="range"],
+  [type="color"], [type="button"], [type="submit"],
+  [type="reset"], [type="hidden"], [type="image"]
+),
+select,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: v.$spacing-2;
+  padding: v.$spacing-1 v.$spacing-2;
+  border: v.$border-width solid v.$border-color;
+  border-radius: v.$border-radius;
+  background-color: v.$background-color;
+  color: v.$text-color;
+  font-family: v.$font-family;
+  font-size: v.$font-size-base;
+  line-height: 1.5;
+
+  &:hover:not(:disabled):not(:focus) {
+    border-color: v.$secondary-color;
+  }
+
+  &:focus {
+    border-color: v.$primary-color;
+    outline: 2px solid v.$primary-color;
+    outline-offset: 2px;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: v.$light-color;
+  }
+
+  &:disabled {
+    color: v.$secondary-color;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: v.$secondary-color;
+    opacity: 1;
+  }
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"],
+input[type="color"] {
+  accent-color: v.$primary-color;
+
+  &:focus-visible {
+    outline: 2px solid v.$primary-color;
+    outline-offset: 3px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: v.$spacing-1;
+  margin-bottom: v.$spacing-2;
+
+  input,
+  label {
+    margin: 0;
+  }
+}
+
+fieldset {
+  min-width: 0;
+  margin: 0 0 v.$spacing-3;
+  padding: v.$spacing-2;
+  border: v.$border-width solid v.$border-color;
+  border-radius: v.$border-radius;
+}
+
+legend {
+  padding: 0 v.$spacing-1;
+  color: v.$text-color;
+  font-weight: 600;
+}
+
+.form-help {
+  color: v.$secondary-color;
+  font-size: v.$font-size-small;
+}

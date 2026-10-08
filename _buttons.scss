@@ -1,0 +1,61 @@
+@use "sass:color";
+@use "variables" as v;
+
+button,
+.btn,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: v.$spacing-1 v.$spacing-2;
+  border: v.$border-width solid v.$primary-color;
+  border-radius: v.$border-radius;
+  background-color: v.$primary-color;
+  color: v.$background-color;
+  font-family: v.$font-family;
+  font-size: v.$font-size-base;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+  &:hover:not(:disabled) {
+    background-color: color.adjust(v.$primary-color, $lightness: -10%);
+    border-color: color.adjust(v.$primary-color, $lightness: -10%);
+  }
+
+  &:focus-visible {
+    outline: 3px solid v.$primary-color;
+    outline-offset: 3px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.btn-secondary {
+  background-color: v.$secondary-color;
+  border-color: v.$secondary-color;
+
+  &:hover:not(:disabled) {
+    background-color: color.adjust(v.$secondary-color, $lightness: -10%);
+    border-color: color.adjust(v.$secondary-color, $lightness: -10%);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: v.$primary-color;
+
+  &:hover:not(:disabled) {
+    background-color: v.$primary-color;
+    border-color: v.$primary-color;
+    color: v.$background-color;
+  }
+}

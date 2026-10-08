@@ -1,0 +1,64 @@
+@use "sass:color";
+@use "variables" as v;
+
+table {
+  width: 100%;
+  margin-bottom: v.$spacing-3;
+  border-collapse: collapse;
+  border: v.$border-width solid v.$border-color;
+  background-color: v.$background-color;
+  color: v.$text-color;
+  font-family: v.$font-family;
+  font-size: v.$font-size-base;
+
+  caption {
+    margin-bottom: v.$spacing-1;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: v.$spacing-2;
+    border: v.$border-width solid v.$border-color;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  thead {
+    background-color: v.$primary-color;
+    color: v.$background-color;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: v.$light-color;
+  }
+
+  tbody tr:hover {
+    background-color: color.mix(
+      v.$primary-color,
+      v.$background-color,
+      8%
+    );
+  }
+
+  tfoot {
+    background-color: v.$light-color;
+    font-weight: 600;
+  }
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: v.$spacing-3;
+
+  table {
+    margin-bottom: 0;
+  }
+
+  &:focus-visible {
+    outline: 2px solid v.$primary-color;
+    outline-offset: 2px;
+  }
+}
