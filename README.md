@@ -32,6 +32,12 @@ README.md
 
 Download or clone the repository.
 
+To customize and compile the Sass source, install Dart Sass:
+
+```bash
+npm install --global sass
+```
+
 Include the compiled CSS file inside the `<head>` section of your HTML file:
 
 ```html
@@ -145,24 +151,32 @@ Utility classes can be combined with HTML elements for additional styling:
 
 The framework can be customized by editing the Sass variables inside `_variables.scss`.
 
-For example:
+Available variables include colors, typography, spacing, and border settings.
+
+Example:
 
 ```scss
+// Colors
 $primary-color: #4f46e5;
 $secondary-color: #6b7280;
 $text-color: #222222;
 $background-color: #ffffff;
+$light-color: #f3f4f6;
+$border-color: #d1d5db;
 
+// Typography
 $font-family: Arial, sans-serif;
 
 $font-size-small: 0.875rem;
 $font-size-base: 1rem;
 $font-size-large: 1.25rem;
 
+// Spacing
 $spacing-1: 0.5rem;
 $spacing-2: 1rem;
 $spacing-3: 1.5rem;
 
+// Borders
 $border-radius: 0.5rem;
 $border-width: 1px;
 ```
@@ -183,7 +197,7 @@ will update the primary color used throughout the framework after Sass is compil
 
 ## Sass Structure
 
-The framework is organized into Sass partials:
+The framework is organized into Sass partials and combined through `main.scss`.
 
 - `_variables.scss` — global Sass variables
 - `_base.scss` — base styles and layout
@@ -194,7 +208,29 @@ The framework is organized into Sass partials:
 - `_utilities.scss` — reusable utility classes
 - `main.scss` — imports all Sass partials
 
-After making changes to the Sass files, compile `main.scss` to generate an updated `main.css`.
+The `main.scss` file includes:
+
+```scss
+@import "variables";
+@import "base";
+@import "typography";
+@import "buttons";
+@import "forms";
+@import "tables";
+@import "utilities";
+```
+
+After changing the Sass files, compile `main.scss` to generate an updated `main.css`:
+
+```bash
+sass main.scss main.css
+```
+
+During development, Sass can automatically recompile whenever a source file changes:
+
+```bash
+sass --watch main.scss:main.css
+```
 
 ## Compiled CSS
 
